@@ -1,0 +1,170 @@
+/*body{*/
+	/*background-color: rgb(153, 193, 192);*/
+/*}*/
+
+h1 {
+	font-size: 40px;
+    color: #339fa0;
+}
+
+h3 {
+    font-weight: lighter;
+}
+
+.title h1{
+	font-size: 56px;
+	color: white;
+	font-weight: 100;
+}
+
+.title h3 {
+	margin-top: 10px;
+	color: white;
+	font-weight: 100;
+    cursor: pointer;
+}
+
+.header-spacer{
+	height: 10px;
+}
+
+.header-menu-button{
+	cursor: pointer;
+	color: white;
+}
+
+.hide-sidebar{
+	display: none;
+}
+
+.sidebar{
+	border: solid 1px #555;
+	background-color: #7E8688;
+	padding-bottom: 2em;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	z-index: 9999;
+}
+
+.list-group-item {
+	border-color: #000000
+}
+.sidebar-list{
+	margin-top: 1em;
+	width: 100%;
+}
+
+.sidebar-item{
+	font-size: 1.5em;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding-left: .2em;
+    padding-top: .2em;
+    padding-bottom: .3em;
+    text-align: left;
+    background-color: #9068be;
+	border-top: #b7b4b4 1px solid;
+    /*font-size: 2em;*/
+}
+
+.fixed-header{
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    /*background-color: rgba(128, 128, 128, 0.26);*/
+	background-color: #e62739;
+}
+
+.header{
+	background-color: #6ed3cf;
+	height: 150px;	
+}
+
+.first{
+	/*background-color: #6ed3cf;*/
+	height: 30em;
+}
+
+.second{
+	/*background-color: #9068be;*/
+	height: 30em;
+}
+
+.third{
+	height: 30em;
+}
+
+.fourth{
+	height: 15em;
+}
+
+.footer {
+	position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;
+	padding-top:20px;
+}
+
+.hamburger-icon{
+	display: none;
+}
+
+.horizontal-menu{
+	display: inherit;
+}
+
+.horizontal-menu-span{
+    cursor: pointer;
+    color: white;
+    font-size: 1.4em;
+    font-weight: lighter;
+}
+
+.horizontal-menu-item{
+    text-align: right;
+}
+
+.services-image{
+    width: 100%;
+    max-width: 400px;
+}
+
+.first-row > img{
+    z-index: -1;
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
+    position: absolute;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: white;
+}
+
+/* Small devices (768px and down) */
+@media only screen and (max-width: 768px) {
+	.sidebar-item{
+		font-size: 1.5em;
+	}
+	/*.navbar{*/
+		/*height: none;*/
+	/*}*/
+	.col-xs-0, .col-sm-0{
+		display: none;
+	}
+	.hamburger-icon{
+		display: block
+	}
+	.horizontal-menu{
+		display: none;
+	}
+}
