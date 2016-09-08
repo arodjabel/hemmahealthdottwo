@@ -55,7 +55,7 @@ angular.module('hemma.navbar', [])
 					angular.element($window).bind("scroll", function() {
 					    console.log('what')
 						$rootScope.$emit('updateSidebarContent', this.pageYOffset);
-						if (this.pageYOffset >= 150) {
+						if (this.pageYOffset >= 100) {
 							$scope.hideFixed = true;
 						} else {
 							$scope.hideFixed = false;

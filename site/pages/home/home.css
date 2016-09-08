@@ -15,6 +15,7 @@ h3 {
 	font-size: 56px;
 	color: white;
 	font-weight: 100;
+    margin-top: 0px;
 }
 
 .title h3 {
@@ -84,7 +85,7 @@ h3 {
 
 .header{
 	background-color: #6ed3cf;
-	height: 150px;	
+	height: 100px;
 }
 
 .first{
@@ -149,6 +150,23 @@ h3 {
     background-size: cover;
     background-color: white;
 }
+.contact-form-container{
+    background: url('../../../../images/contact-phone.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-shadow: 0 0 2em #f3f3f3, 0 0 2em #f3f3f3, 0 0 2em #f3f3f3, 0 0 1em #f3f3f3;
+}
+
+.first-row{
+    background: url('../../../../images/landscape-animal-mountain-top.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-shadow: 0 0 2em #f3f3f3, 0 0 2em #f3f3f3, 0 0 2em #f3f3f3, 0 0 1em #f3f3f3;
+}
 
 /* Small devices (768px and down) */
 @media only screen and (max-width: 768px) {
@@ -167,4 +185,13 @@ h3 {
 	.horizontal-menu{
 		display: none;
 	}
+
+    .title h1{
+        font-size: 40px;
+    }
+
+    .contact-form-container{
+        background: url('../../../../images/contact-phone.jpg')no-repeat left center fixed;
+        background-size: cover
+    }
 }
