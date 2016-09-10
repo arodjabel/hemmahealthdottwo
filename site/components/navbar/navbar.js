@@ -85,8 +85,12 @@ angular.module('hemma.navbar', [])
         value:'services',
         image: 'fa-cogs'
     },{
-        label:'Get In Touch',
-        value:'contact-us',
-        image: 'fa-envelope-o'
-    }
+    	label:'Resources',
+		value:'resources',
+		image: 'fa-book'
+	},{
+		label:'Get In Touch',
+		value:'contact-us',
+		image: 'fa-envelope-o'
+	}
 ])

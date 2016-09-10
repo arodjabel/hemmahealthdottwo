@@ -1,0 +1,23 @@
+
+<img src="../../../images/stack-of-books.jpeg" class="resources-container">
+<div class="col-xs-12">
+    <div class="row ">
+        <div class="col-xs-12 col-md-offset-2 col-md-8 resources-container-child">
+            <h1>A few keys to success.</h1>
+            <h3>Online Sources -</h3>
+            <div class="resources-online-sources">
+                <dl ng-repeat="src in res.onlineSources">
+                    <dt>{{src.title}}</dt>
+                    <dd><a href="{{src.absUrl}}" target="_blank">{{src.prettyUrl}}</a></dd>
+                </dl>
+            </div>
+            <h3>Videos -</h3>
+            <dl ng-repeat="vid in res.videos">
+                <dt>{{vid.title}}</dt>
+                <dd><a href="{{vid.absUrl}}" target="_blank">{{vid.prettyUrl}}</a></dd>
+            </dl>
+        </div>
+        </div>
+    </div>
+</div>
+
