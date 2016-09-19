@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='app'>
+<html ng-app='app' class-route>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,14 +50,11 @@
 	<div class="sidebar" 
 		ng-class="(navbar.sidebarActive ? 'show-sidebar':'hide-sidebar')"
 		ng-style="navbar.sidebarContent">
-
 		<div class="sidebar-content" >
 			<div class="list-group sidebar-list">
-
 				<div class="sidebar-item" ng-repeat="item in navbar.menuItems" ng-click="navbar.changePage(item.value)">
 					<i class="fa {{item.image}}"></i> &nbsp;{{item.label}}
 				</div>
-
 			</div>
 		</div>
 	</div>

@@ -2,19 +2,21 @@
 <!--<div class="row header">-->
     <div class="col-md-12 himma-nav header">
         <div class="row">
-            <div class="menu-dropdown col-xs-2 col-md-1 hamburger-icon">
-                <i class="fa fa-bars fa-3x header-menu-button" ng-click="navbar.toggleSidebar()"></i>
+            <div class="menu-dropdown col-xs-2 hamburger-icon">
+                <i class="fa fa-bars fa header-menu-button" ng-click="navbar.toggleSidebar()"></i>
             </div>
-            <div class="content col-xs-10 col-md-11">
+            <div class="content col-xs-10 col-sm-5">
                 <div class="title">
-                    <h1 ng-hide="hideFixed" ng-click="navbar.changePage('home')">Hemma Health</h1>
-                    <h3 ng-show="hideFixed" ng-click="navbar.changePage('home')">Hemma Health</h3>
+                    <h1 ng-hide="hideFixed" ng-click="navbar.changePage('home')" class="title-heading">Hemma Health</h1>
+                    <h3 ng-show="hideFixed" ng-click="navbar.changePage('home')" class="title-heading">Hemma Health</h3>
                 </div>
             </div>
-        </div>
-        <div class="row horizontal-menu">
-            <div class="col-sm-3 col-md-2 horizontal-menu-item" ng-repeat="item in navbar.menuItems" ng-click="navbar.changePage(item.value)">
-                <span class="horizontal-menu-span"><i class="fa {{item.image}}"></i> &nbsp;{{item.label}}</span>
+            <div class="horizontal-menu col-sm-7">
+                <div class="row">
+                    <div class="col-xs-4 horizontal-menu-item" ng-repeat="item in navbar.menuItems" ng-click="navbar.changePage(item.value)">
+                        <span class="horizontal-menu-span"><i class="fa {{item.image}}"></i> &nbsp;{{item.label}}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -23,13 +25,20 @@
 <!--<div class="row fixed-header" ng-show="hideFixed">-->
     <div class="col-xs-12 himma-nav fixed-header" ng-show="hideFixed">
         <div class="row">
-            <div class="menu-dropdown col-xs-2">
-                <i class="fa fa-bars fa-3x header-menu-button" ng-click="navbar.toggleSidebar()"></i>
+            <div class="menu-dropdown col-xs-2 hamburger-icon">
+                <i class="fa fa-bars fa header-menu-button" ng-click="navbar.toggleSidebar()"></i>
             </div>
-            <div class="content col-xs-10">
+            <div class="content col-xs-10 col-sm-5">
                 <div class="title">
-                    <h1 ng-hide="hideFixed" ng-click="navbar.changePage('home')">Hemma Health</h1>
-                    <h3 ng-show="hideFixed" ng-click="navbar.changePage('home')">Hemma Health</h3>
+                    <h1 ng-hide="hideFixed" ng-click="navbar.changePage('home')" class="title-heading">Hemma Health</h1>
+                    <h3 ng-show="hideFixed" ng-click="navbar.changePage('home')" class="title-heading">Hemma Health</h3>
+                </div>
+            </div>
+            <div class="horizontal-menu col-sm-7">
+                <div class="row">
+                    <div class="col-xs-4 horizontal-menu-item" ng-repeat="item in navbar.menuItems" ng-click="navbar.changePage(item.value)">
+                        <span class="horizontal-menu-span"><i class="fa {{item.image}}"></i> &nbsp;{{item.label}}</span>
+                    </div>
                 </div>
             </div>
         </div>

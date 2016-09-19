@@ -53,9 +53,8 @@ angular.module('hemma.navbar', [])
 					$rootScope.$on('updateSidebarContent', event_updateSidebarContent);
 
 					angular.element($window).bind("scroll", function() {
-					    console.log('what')
 						$rootScope.$emit('updateSidebarContent', this.pageYOffset);
-						if (this.pageYOffset >= 100) {
+						if (this.pageYOffset >= 55) {
 							$scope.hideFixed = true;
 						} else {
 							$scope.hideFixed = false;
@@ -75,15 +74,15 @@ angular.module('hemma.navbar', [])
 	}
 ])
 .constant('nav.menuItems', [
-	{
-		label:'Hemma Health',
-		value:'home',
-		image: 'fa-home'
-	},
+	// {
+	// 	label:'Hemma Health',
+	// 	value:'home',
+	// 	image: 'fa-home'
+	// },
     {
         label:'What We Do',
         value:'services',
-        image: 'fa-cogs'
+        image: 'fa-medkit'
     },{
     	label:'Resources',
 		value:'resources',
