@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app='app' class-route>
 <head>
+	<base href="/">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Hemma Health</title>
@@ -60,7 +61,7 @@
 	</div>
 	<div class="container-fluid">
 		<div navbar class="row"></div>
-		<div ng-view ng-click="navbar.ngViewClick()" class="row"></div>
+		<div ng-view ng-click="navbar.ngViewClick()" class="row the-view"></div>
 	</div>
 </body>
 

@@ -1,9 +1,6 @@
 
-
-var gulp = require('gulp');
 var express = require('express');
 var app = express();
-var path = require('path');
 var open = require('open');
 var bodyParser = require('body-parser');
 

@@ -9,8 +9,8 @@ angular.module('app', [
     'common.modal',
     'hemma.resources'
 ])
-.config(['$routeProvider',
-    function ($routeProvider) {
+.config(['$routeProvider', '$locationProvider',
+    function ($routeProvider, $locationProvider) {
         $routeProvider.when('/home', {
             controller: 'hemmaCtrl',
             templateUrl: './site/pages/home/home.html',
@@ -31,6 +31,7 @@ angular.module('app', [
         .otherwise({
             redirectTo: '/home'
         });
+        $locationProvider.html5Mode(true);
     }])
     .directive('classRoute', function($rootScope, $route) {
 

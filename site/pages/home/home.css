@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 body{
 	overflow-x: hidden;
     width: 100%;
@@ -7,7 +11,7 @@ body{
 
 h1 {
 	font-size: 40px;
-    color: #339fa0;
+    color: #666666;
 }
 
 h3 {
@@ -16,7 +20,7 @@ h3 {
 
 .title h1{
 	font-size: 3.4em;
-	color: white;
+	color: #e62739;
 	font-weight: 100;
     margin-top: 0px;
 }
@@ -38,7 +42,7 @@ h3 {
 
 .header-menu-button{
 	cursor: pointer;
-	color: white;
+	color: darkgray;
 }
 
 .hide-sidebar{
@@ -60,9 +64,20 @@ h3 {
 .homepage-row{
     min-height: 400px;
 }
+
+.homepage-row > h1{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.homepage-row > h3{
+    text-align: center;
+}
+
 .list-group-item {
 	border-color: #000000
 }
+
 .sidebar-list{
 	margin-top: 1em;
 	width: 100%;
@@ -74,7 +89,7 @@ h3 {
     color: white;
     cursor: pointer;
     width: 100%;
-    padding-left: .2em;
+    padding-left: 1em;
     padding-top: .2em;
     padding-bottom: .3em;
     text-align: left;
@@ -89,12 +104,19 @@ h3 {
     width: 100%;
     top: 0;
     z-index: 999;
-    /*background-color: rgba(128, 128, 128, 0.26);*/
+    color: white;
 	background-color: #e62739;
 }
 
+.fixed-header span{
+    color: white
+}
+
+.fixed-header .header-menu-button{
+    color: white;
+}
 .header{
-	background-color: #6ed3cf;
+	background-color: rgba(255, 255, 255, 0.9);
 	height: 55px;
 }
 
@@ -135,7 +157,7 @@ h3 {
 
 .horizontal-menu-span{
     cursor: pointer;
-    color: white;
+    color: #666666;
     font-size: 1em;
     font-weight: lighter;
 }
@@ -145,9 +167,15 @@ h3 {
     text-align: right;
 }
 
+.spacer{
+    height: 1em;
+}
+
 .services-image{
     width: 100%;
     max-width: 400px;
+    -webkit-filter: grayscale(50%); /* Chrome, Safari, Opera */
+    filter: grayscale(50%);
 }
 
 .contact-form-image{
@@ -175,10 +203,13 @@ h3 {
 }
 
 .resources-container-child{
+    margin-top: 1em;
+}
+
+.opaque-background{
     background: white;
     opacity: 0.7;
     border-radius: 2em 2em;
-    margin-top: 1em;
 }
 
 /* Small devices (768px and down) */
@@ -208,17 +239,18 @@ h3 {
         background: url('../../../../images/contact-phone.jpg')no-repeat left center fixed;
         background-size: cover
     }
-    .resources-container-child{
+
+    .opaque-background{
         border-radius: 0em 0em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
-    .resources-container-child{
+    .opaque-background{
         border-radius: 0em 0em;
     }
     .horizontal-menu-span{
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
