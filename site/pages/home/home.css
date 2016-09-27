@@ -62,15 +62,16 @@ h3 {
 }
 
 .homepage-row{
+    margin-top: 1em;
     min-height: 400px;
 }
 
-.homepage-row > h1{
+.homepage-row h1{
     text-align: center;
     margin-top: 1em;
 }
 
-.homepage-row > h3{
+.homepage-row h3{
     text-align: center;
 }
 
@@ -115,27 +116,10 @@ h3 {
 .fixed-header .header-menu-button{
     color: white;
 }
+
 .header{
 	background-color: rgba(255, 255, 255, 0.9);
 	height: 55px;
-}
-
-.first{
-	/*background-color: #6ed3cf;*/
-	height: 30em;
-}
-
-.second{
-	/*background-color: #9068be;*/
-	height: 30em;
-}
-
-.third{
-	height: 30em;
-}
-
-.fourth{
-	height: 15em;
 }
 
 .footer {
@@ -207,11 +191,19 @@ h3 {
 }
 
 .opaque-background{
+    border-radius: .5em .5em;
     background: white;
     opacity: 0.7;
-    border-radius: 2em 2em;
+    padding: .5em;
 }
 
+.second-row{
+    cursor: pointer;
+}
+
+.third-row{
+    cursor: pointer;
+}
 /* Small devices (768px and down) */
 @media only screen and (max-width: 768px) {
 	.sidebar-item{
@@ -241,13 +233,13 @@ h3 {
     }
 
     .opaque-background{
-        border-radius: 0em 0em;
+        border-radius: .5em .5em;
     }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
     .opaque-background{
-        border-radius: 0em 0em;
+        border-radius: .5em .5em;
     }
     .horizontal-menu-span{
         font-size: 1em;
