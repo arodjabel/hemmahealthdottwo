@@ -1,10 +1,12 @@
 branch-defaults:
   master:
-    environment: chiefdogfive
+    environment: nelson
+deploy:
+  artifact: Archive.zip
 global:
-  application_name: chiefdogfive
+  application_name: nelson
   default_ec2_keyname: null
-  default_platform: Node.js
+  default_platform: 64bit Amazon Linux 2016.03 v2.1.3 running Node.js
   default_region: us-west-2
   profile: eb-cli
   sc: git

@@ -98,14 +98,42 @@ deployFn = function () {
         }
 
         startDeploy().then(function () {
-            // exec(['eb deploy', '--staged'], function(err, out, code) {
-            //     if (err instanceof Error){
-            //         throw err;
-            //     }
-            //     process.stderr.write(err);
-            //     process.stdout.write(out);
-            //     process.exit(code);
+            const spawn = require('child_process').spawn;
+            const ls = spawn('eb', ['deploy', '--staged']);
+
+
+            ls.stdout.setEncoding('utf8');
+            ls.stderr.setEncoding('utf8');
+
+            ls.stdout.on('data', function(data) {
+                var str = data.toString(), lines = str.split(/(\r?\n)/g);
+                for (var i=0; i<lines.length; i++) {
+                    // Process the line, noting it might be incomplete.
+                    if(lines[i])
+                        console.log(lines[i])
+                }
+            });
+            // ls.stdout.on('data', function(data) {
+            //
+            //     const cent = Buffer.from(data);
+            //     console.log(decoder.write(cent))
+            //     console.log('stdout',data);
             // });
+
+            ls.stderr.on('data', function(data) {
+                var str = data.toString(), lines = str.split(/(\r?\n)/g);
+                for (var i=0; i<lines.length; i++) {
+                    // Process the line, noting it might be incomplete.
+                    if(lines[i])
+                        console.log(lines[i])
+                }
+            });
+
+            ls.on('close', function(code) {
+                console.log(code);
+                resolve();
+
+            });
         });
     });
 };

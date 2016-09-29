@@ -1,6 +1,6 @@
 <!-- init header -->
 <!--<div class="row header">-->
-    <div class="col-md-12 himma-nav header">
+    <div class="col-md-12 himma-nav header" ng-show="(!hideFixed )? 'hidden-fixed' : ''">
         <div class="row">
             <div class="menu-dropdown col-xs-2 hamburger-icon">
                 <i class="fa fa-bars fa header-menu-button" ng-click="navbar.toggleSidebar()"></i>
@@ -23,7 +23,7 @@
 <!--</div>-->
 <!-- fixed header -->
 <!--<div class="row fixed-header" ng-show="hideFixed">-->
-    <div class="col-xs-12 himma-nav fixed-header" ng-show="hideFixed">
+    <div class="col-xs-12 himma-nav fixed-header" ng-show="(hideFixed) ? 'hidden-fixed' : ''">
         <div class="row">
             <div class="menu-dropdown col-xs-2 hamburger-icon">
                 <i class="fa fa-bars fa header-menu-button" ng-click="navbar.toggleSidebar()"></i>

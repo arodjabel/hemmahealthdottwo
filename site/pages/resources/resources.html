@@ -13,9 +13,9 @@
             <h3>Videos -</h3>
             <dl ng-repeat="vid in res.videos">
                 <dt>{{vid.title}}</dt>
-                <dd><a href="{{vid.absUrl}}" target="_blank">{{vid.prettyUrl}}</a></dd>
+                <dd ng-if="!vid.embed"><a href="{{vid.absUrl}}" target="_blank">{{vid.prettyUrl}}</a></dd>
+                <dd ng-if="vid.embed"><div embedded-video="vid.embed"></div></dd>
             </dl>
-        </div>
         </div>
     </div>
 </div>

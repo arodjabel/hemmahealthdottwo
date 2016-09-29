@@ -40,6 +40,11 @@ angular.module('hemma.resources', [])
         title: 'eCW Users',
         absUrl: 'ecwusers.com',
         prettyUrl: 'ecwusers.com'
+    },
+    {
+        title: 'The Block & Biggs eClinicalWorks Roadshow',
+        absUrl: 'http://blockandnation.com/blockandbiggs/',
+        prettyUrl: 'http://blockandnation.com/blockandbiggs/'
     }
 ])
 .constant('resources.videos', [

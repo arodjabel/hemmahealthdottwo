@@ -1,3 +1,7 @@
 .navbar-brand img{
 	width: 10%;
 }
+
+.hidden-fixed{
+	height:0;
+}

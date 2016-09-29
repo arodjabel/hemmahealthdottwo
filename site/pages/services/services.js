@@ -11,4 +11,4 @@ angular.module('hemma.services',[])
 			}],
 			templateUrl: './site/pages/services/services.html'
 		}
-	}])
+	}]);
