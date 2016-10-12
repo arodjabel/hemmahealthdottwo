@@ -111,6 +111,7 @@ runTheArchive = function () {
     });
 };
 
+// i havent been able to get this one to work quite right yet
 function deployToEb(){
     console.log('starting EB deploy');
     const spawn = require('child_process').spawn;
