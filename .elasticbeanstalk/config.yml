@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: nelson
+    environment: nelson-beta
 deploy:
   artifact: Archive.zip
 global:

@@ -1,54 +1,71 @@
-<!--<div ></div>-->
-<h1 class="col-xs-12 col-md-8 col-md-offset-2" ng-show="contactCtrl.showForm">Let's Get in Touch!</h1>
-<p class="col-xs-12 col-md-8 col-md-offset-2" ng-show="contactCtrl.showForm"> Please fill out and submit the contact form. We will be in touch soon.</p>
-<form class="form-horizontal col-md-8 col-md-offset-2" name="contactForm" ng-show="contactCtrl.showForm">
-	<div class="form-group">
-		<label for="inputFirstName" class="col-sm-2 control-label">Who are you?</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" id="inputFirstName" ng-model="contactCtrl.cForm.name" placeholder="Name">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputLastName" class="col-sm-2 control-label">Do you have an employer or company?</label>
-		<div class="col-sm-10">
-		<input type="text" class="form-control" id="inputLastName" ng-model="contactCtrl.cForm.company" placeholder="Company or Employer">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputEmail3" class="col-sm-2 control-label">Email is usually best</label>
-		<div class="col-sm-10">
-			<input type="email" class="form-control" id="inputEmail3" ng-model="contactCtrl.cForm.email" placeholder="Email">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPhoneNumber" class="col-sm-2 control-label">Just in case, best contact number?</label>
-		<div class="col-sm-10">
-		<input type="text" class="form-control" id="inputPhoneNumber" ng-model="contactCtrl.cForm.phone" placeholder="Phone Number">
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputBlurb" class="col-sm-2 control-label">How can we help?</label>
-		<div class="col-sm-10">
-			<textarea class="form-control" id="inputBlurb" ng-model="contactCtrl.cForm.details" rows="3"></textarea>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="contact-recaptcha" class="col-sm-2 control-label">Sorry about this but, are you a human?</label>
-		<div class="col-sm-10">
-			<div id="contact-recaptcha" class="g-recaptcha" data-callback="loadRecaptcha" data-expired-callback="veriFailed" data-theme="dark" data-sitekey="6Lc2CBsTAAAAAKwvAUIOuugFmCXYqZg5VLlEDWQ9"></div>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<p>We only require that you pass the not a robot test, but please ensure you leave enough information for us to get in touch. </p>
-		</div>
-	</div>
-	<div class="form-group">
-		<div class="col-sm-offset-2 col-sm-10">
-			<button type="submit" class="btn btn-default pull-right submit-button" ng-click="contactCtrl.sendTheForm()" disabled>Send It! <i class="fa fa-paper-plane"></i></button>
-		</div>
-	</div>
-</form>
+<div class="col-xs-12 col-md-8 col-md-offset-2 ">
+    <div class="row contact-container opaque-background">
+        <h1 class="col-xs-12" ng-show="contactCtrl.showForm">Let's Get in Touch!</h1>
+        <p class="col-xs-12 " ng-show="contactCtrl.showForm"> Please fill out and submit the
+            contact form. We will be in touch soon.</p>
+        <form class="form-horizontal " name="contactForm" ng-show="contactCtrl.showForm">
+            <div class="form-group">
+                <label for="inputFirstName" class="col-sm-2 control-label">Who are you?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputFirstName" ng-model="contactCtrl.cForm.name"
+                           placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputLastName" class="col-sm-2 control-label">Do you have an employer or company?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputLastName" ng-model="contactCtrl.cForm.company"
+                           placeholder="Company or Employer">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email is usually best</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" ng-model="contactCtrl.cForm.email"
+                           placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPhoneNumber" class="col-sm-2 control-label">Just in case, best contact number?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPhoneNumber" ng-model="contactCtrl.cForm.phone"
+                           placeholder="Phone Number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputBlurb" class="col-sm-2 control-label">How can we help?</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="inputBlurb" ng-model="contactCtrl.cForm.details"
+                              rows="3"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="contact-recaptcha" class="col-sm-2 control-label">Sorry about this but, are you a
+                    human?</label>
+                <div class="col-sm-10">
+                    <div id="contact-recaptcha" class="g-recaptcha" data-callback="loadRecaptcha"
+                         data-expired-callback="veriFailed" data-theme="dark"
+                         data-sitekey="6Lc2CBsTAAAAAKwvAUIOuugFmCXYqZg5VLlEDWQ9"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <p>We only require that you pass the not a robot test, but please ensure you leave enough
+                        information for us to get in touch. </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default pull-right submit-button"
+                            ng-click="contactCtrl.sendTheForm()" disabled>Send It! <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
 
-<h1 class="col-xs-12 col-md-8 col-md-offset-2" ng-show="!contactCtrl.showForm">{{contactCtrl.messageConfig.title}}</h1>
-<p class="col-xs-12 col-md-8 col-md-offset-2" ng-show="!contactCtrl.showForm">{{contactCtrl.messageConfig.body}}</p>
+        <h1 class="col-xs-12 col-md-8 col-md-offset-2" ng-show="!contactCtrl.showForm">
+            {{contactCtrl.messageConfig.title}}</h1>
+        <p class="col-xs-12 col-md-8 col-md-offset-2" ng-show="!contactCtrl.showForm">
+            {{contactCtrl.messageConfig.body}}</p>
+    </div>
+</div>

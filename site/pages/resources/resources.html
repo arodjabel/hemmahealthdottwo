@@ -3,6 +3,12 @@
     <div class="row ">
         <div class="col-xs-12 col-md-offset-2 col-md-8 resources-container-child opaque-background">
             <h1>A few keys to success.</h1>
+            <h3>Documents -</h3>
+            <div class="resources-online-sources">
+                <div ng-repeat="src in res.documents">
+                    <a href="{{src.absUrl}}" target="_blank">{{src.title}}</a>
+                </div>
+            </div>
             <h3>Online Sources -</h3>
             <div class="resources-online-sources">
                 <dl ng-repeat="src in res.onlineSources">

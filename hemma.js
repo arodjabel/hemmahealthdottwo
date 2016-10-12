@@ -7,7 +7,8 @@ angular.module('app', [
     'hemma.services',
     'hemma.footer',
     'common.modal',
-    'hemma.resources'
+    'hemma.resources',
+    'hemma.about'
 ])
 .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
@@ -22,11 +23,15 @@ angular.module('app', [
         })
         .when('/services', {
             template: '<div services></div>',
-            class: ''
+            class: 'services-background'
         })
         .when('/resources', {
             template: '<div resources></div>',
             class: 'resources-image'
+        })
+        .when('/about-us', {
+            template: '<div about-us></div>',
+            class: 'about-us'
         })
         .otherwise({
             redirectTo: '/home'
@@ -54,6 +59,5 @@ angular.module('app', [
                 }
             });
         };
-
     });
 

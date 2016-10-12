@@ -15,7 +15,7 @@ h1 {
 }
 
 h3 {
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 .title h1{
@@ -41,6 +41,7 @@ h3 {
 }
 
 .header-menu-button{
+    margin-top: 12px;
 	cursor: pointer;
 	color: darkgray;
 }
@@ -51,19 +52,19 @@ h3 {
 
 .sidebar{
 	border: solid 1px #555;
-	background-color: #7E8688;
+	background-color: rgba(126, 134, 136, 0.43);;
 	padding-bottom: 2em;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 50%;
+	width: 75%;
 	height: 100%;
 	z-index: 9999;
 }
 
 .homepage-row{
     margin-top: 1em;
-    min-height: 400px;
+    /*min-height: 200px;*/
 }
 
 .homepage-row h1{
@@ -72,6 +73,10 @@ h3 {
 }
 
 .homepage-row h3{
+    text-align: center;
+}
+
+.homepage-row h5{
     text-align: center;
 }
 
@@ -85,7 +90,7 @@ h3 {
 }
 
 .sidebar-item{
-	font-size: 1.5em;
+	font-size: 2em;
     font-weight: 100;
     color: white;
     cursor: pointer;
@@ -143,7 +148,10 @@ h3 {
     cursor: pointer;
     color: #666666;
     font-size: 1em;
-    font-weight: lighter;
+    font-weight: 300;
+    margin-right: 2em;
+    margin-top: 1em;
+    line-height: 3.4em;
 }
 
 .horizontal-menu-item{
@@ -155,14 +163,73 @@ h3 {
     height: 1em;
 }
 
+.services-background{
+    background-color: #a5c8ca;
+}
+.service-page-title{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.service-list{
+    /*padding-left: 3em;*/
+}
+
+.service-list dt{
+    font-family: monospace;
+    font-weight: 300;
+    color: #000000;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.service-list dd{
+    font-weight: 200;
+    font-size: 1.2em;
+}
+
+.service-subtitle{
+    font-size: 1.3em;
+    color: #4a626d;
+    text-align: left;
+}
+
+.service-subtitle span{
+    border-bottom: .5px solid #4a626d;
+}
+
+.service-subtitle-subheading{
+    padding-left: 1em;
+    color: #585858;
+    text-align: left;
+    font-weight: 400;
+}
+
 .services-image{
     width: 100%;
     max-width: 400px;
-    -webkit-filter: grayscale(50%); /* Chrome, Safari, Opera */
-    filter: grayscale(50%);
+    -webkit-filter: grayscale(10%); /* Chrome, Safari, Opera */
+    filter: grayscale(10%);
+}
+
+.about-title{
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.about-title h1{
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-size: 5em;
+    text-align: center;
+}
+
+.about-text-body{
+    font-size: 1.5em;
+    text-align: left;
 }
 
 .contact-form-image{
+    background-color: transparent;
     background: url('../../../../images/contact-phone.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -171,7 +238,8 @@ h3 {
 }
 
 .resources-image {
-    background: url('../../../../images/stack-of-books.jpeg') no-repeat center center fixed;
+    background-color: transparent;
+    background: url('../../../../images/stack-of-books.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -179,7 +247,17 @@ h3 {
 }
 
 .home-image{
-    background: url('../../../../images/human-on-cliff.jpeg') no-repeat center center fixed;
+    background-color: transparent;
+    background: url('../../../images/human-on-cliff.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-us{
+    background-color: transparent;
+    background: url('../../../images/kansas-city-1380036_1920.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -190,11 +268,15 @@ h3 {
     margin-top: 1em;
 }
 
+.contact-container{
+    margin-top: 1em;
+}
+
 .opaque-background{
     border-radius: .5em .5em;
-    background: white;
-    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: .5em;
+    margin-bottom: 100px;
 }
 
 .second-row{
@@ -207,7 +289,7 @@ h3 {
 /* Small devices (768px and down) */
 @media only screen and (max-width: 768px) {
 	.sidebar-item{
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 
 	.col-xs-0, .col-sm-0{
@@ -235,6 +317,10 @@ h3 {
     .opaque-background{
         border-radius: .5em .5em;
     }
+
+    .about-title h1{
+        font-size: 3em;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -243,6 +329,12 @@ h3 {
     }
     .horizontal-menu-span{
         font-size: 1em;
+    }
+    .title h1{
+        font-size: 2.4em;
+        color: #e62739;
+        font-weight: 100;
+        margin-top: 10px;
     }
 }
 

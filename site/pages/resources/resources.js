@@ -1,14 +1,15 @@
 'use strict'
 
 angular.module('hemma.resources', [])
-.directive('resources', ['resources.onlineSources', 'resources.videos',
-    function(onlineSources, videos){
+.directive('resources', ['resources.documents', 'resources.onlineSources', 'resources.videos',
+    function(documents, onlineSources, videos){
         return {
             bindToController: true,
             controllerAs: 'res',
             controller: ['$scope', '$compile',
                 function($scope, $compile){
                     var res = this;
+                    res.documents = documents;
                     res.onlineSources = onlineSources;
                     res.videos = videos;
                     res.compile = function(string){
@@ -35,11 +36,17 @@ angular.module('hemma.resources', [])
         }
     }
 ])
+.constant('resources.documents', [
+    {
+        title: 'Dental Merge Tool Help',
+        absUrl: 'https://s3-us-west-2.amazonaws.com/hemmahealth-content/content/dentalMergeToolHelp_20161001.pdf'
+    }
+])
 .constant('resources.onlineSources', [
     {
         title: 'eCW Users',
-        absUrl: 'ecwusers.com',
-        prettyUrl: 'ecwusers.com'
+        absUrl: 'http://ecwusers.com/',
+        prettyUrl: 'http://ecwusers.com/'
     },
     {
         title: 'The Block & Biggs eClinicalWorks Roadshow',

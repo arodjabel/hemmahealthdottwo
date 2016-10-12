@@ -48,7 +48,7 @@ function createArchive(dir) {
             if (finalizeCounter === (filesToCompress.length + dirsToCompress.length)) {
                 // archive.writeZip(path.join(__dirname, zipName));
                 archive.finalize();
-                console.log('Archive.zip has been written');
+                console.log('created blank Archive.zip');
                 resolve();
             }
         }
@@ -71,7 +71,7 @@ function deleteArchive(dir, archive) {
     })
 }
 
-deployFn = function () {
+runTheArchive = function () {
     return new Promise(function (resolve, reject) {
         var dir,
             archive;
@@ -82,60 +82,66 @@ deployFn = function () {
         //does archive exist?
         function startDeploy() {
             return new Promise(function (resolve, reject) {
+                function closeTheFile(fd){
+                    fs.close(fd);
+                    resolve();
+                }
                 fs.open(archive, 'r', function (err, fd) {
                     if (err) {
                         if (err.code === "ENOENT") {
                             console.error('Archive.zip is not available');
-                            createArchive(dir).then(resolve);
+                            createArchive(dir).then(function (){
+                                closeTheFile(fd)
+                            });
                         } else {
-                            deleteArchive(dir, archive).then(resolve);
+                            deleteArchive(dir, archive).then(function(){
+                                closeTheFile(fd)
+                            });
                         }
                     } else {
-                        deleteArchive(dir, archive).then(resolve);
+                        deleteArchive(dir, archive).then(function(){
+                            closeTheFile(fd)
+                        });
                     }
                 });
             })
         }
-
-        startDeploy().then(function () {
-            const spawn = require('child_process').spawn;
-            const ls = spawn('eb', ['deploy', '--staged']);
-
-
-            ls.stdout.setEncoding('utf8');
-            ls.stderr.setEncoding('utf8');
-
-            ls.stdout.on('data', function(data) {
-                var str = data.toString(), lines = str.split(/(\r?\n)/g);
-                for (var i=0; i<lines.length; i++) {
-                    // Process the line, noting it might be incomplete.
-                    if(lines[i])
-                        console.log(lines[i])
-                }
-            });
-            // ls.stdout.on('data', function(data) {
-            //
-            //     const cent = Buffer.from(data);
-            //     console.log(decoder.write(cent))
-            //     console.log('stdout',data);
-            // });
-
-            ls.stderr.on('data', function(data) {
-                var str = data.toString(), lines = str.split(/(\r?\n)/g);
-                for (var i=0; i<lines.length; i++) {
-                    // Process the line, noting it might be incomplete.
-                    if(lines[i])
-                        console.log(lines[i])
-                }
-            });
-
-            ls.on('close', function(code) {
-                console.log(code);
-                resolve();
-
-            });
-        });
+        startDeploy();
+        // startDeploy().then(deployToEb);
     });
 };
 
-gulp.task('deploy', deployFn);
+function deployToEb(){
+    console.log('starting EB deploy');
+    const spawn = require('child_process').spawn;
+    const ls = spawn('eb', ['deploy', '--staged']);
+
+    ls.stdout.setEncoding('utf8');
+    ls.stderr.setEncoding('utf8');
+
+    ls.stdout.on('data', function(data) {
+
+        var str = data.toString(), lines = str.split(/(\r?\n)/g);
+        for (var i=0; i<lines.length; i++) {
+            // Process the line, noting it might be incomplete.
+            if(lines[i])
+                console.log(lines[i])
+        }
+    });
+
+    ls.stderr.on('data', function(data) {
+        var str = data.toString(), lines = str.split(/(\r?\n)/g);
+        for (var i=0; i<lines.length; i++) {
+            // Process the line, noting it might be incomplete.
+            if(lines[i])
+                console.log(lines[i])
+        }
+    });
+
+    ls.on('close', function(code) {
+        console.log(code);
+    });
+}
+
+gulp.task('archive', runTheArchive);
+gulp.task('ebDeploy', deployToEb);

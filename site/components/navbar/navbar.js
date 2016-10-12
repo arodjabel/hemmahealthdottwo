@@ -21,12 +21,13 @@ angular.module('hemma.navbar', [])
 					};
 
 					navbar.toggleSidebar = function(){
-						if(!navbar.sidebarActive){
-							navbar.sidebarActive = true; 
-						} else{
-							navbar.sidebarActive = false; 
-						}
-					}
+                        navbar.sidebarActive = (navbar.sidebarActive)? false: true;
+						// if(!navbar.sidebarActive){
+						// 	navbar.sidebarActive = true;
+						// } else{
+						// 	navbar.sidebarActive = false;
+						// }
+					};
 
 					navbar.changePage = function (page){
 						$location.path('/' + page);
@@ -40,11 +41,11 @@ angular.module('hemma.navbar', [])
 							$templateCache.remove(currentPageTemplate);
 							$route.reload()
 						}
-					}
+					};
 
 					navbar.ngViewClick = function(event, b, c){
 						navbar.sidebarActive = false;
-					}
+					};
 
 					event_updateSidebarContent = function(event, payload) {
 						navbar.sidebarContent = {'top': (payload) + 'px'};
@@ -74,11 +75,6 @@ angular.module('hemma.navbar', [])
 	}
 ])
 .constant('nav.menuItems', [
-	// {
-	// 	label:'Hemma Health',
-	// 	value:'home',
-	// 	image: 'fa-home'
-	// },
     {
         label:'What We Do',
         value:'services',
@@ -87,9 +83,14 @@ angular.module('hemma.navbar', [])
     	label:'Resources',
 		value:'resources',
 		image: 'fa-book'
-	},{
-		label:'Get In Touch',
-		value:'contact-us',
-		image: 'fa-envelope-o'
+	}, {
+		label: 'Get In Touch',
+		value: 'contact-us',
+		image: 'fa-envelope'
 	}
-])
+	, {
+		label:'About Us',
+		value:'about-us',
+		image: 'fa-info'
+	}
+]);
