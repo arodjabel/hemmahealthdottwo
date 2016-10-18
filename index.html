@@ -4,6 +4,9 @@
 	<base href="/">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon"
+          type="image/png"
+          href="./images/h-favicon.png">
 	<title>Hemma Health</title>
 
 	<link rel="stylesheet" href="./site/shared_libraries/bootstrap-3.3.4-dist/css/bootstrap.css">
@@ -28,6 +31,7 @@
 	<script type="text/javascript" src="./site/pages/services/services.js"></script>
 	<script type="text/javascript" src="./site/pages/resources/resources.js"></script>
 	<script type="text/javascript" src="./site/pages/about/about.js"></script>
+	<script type="text/javascript" src="./site/pages/lob-reports/lob-reports.js"></script>
 
 	<script type="text/javascript" src="./hemma.js"></script>
 	<script type="text/javascript">
@@ -56,7 +60,7 @@
 		<div class="sidebar-content" >
 			<div class="list-group sidebar-list">
 				<div class="sidebar-item" ng-repeat="item in navbar.menuItems" ng-click="navbar.changePage(item.value)">
-					<i class="fa {{item.image}}"></i> &nbsp;{{item.label}}
+					<i class="fa {{item.image}} sidebar-icon"></i> &nbsp;{{item.label}}
 				</div>
 			</div>
 		</div>

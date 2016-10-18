@@ -104,6 +104,11 @@ h3 {
     /*font-size: 2em;*/
 }
 
+.sidebar-icon{
+    width: 1.5em;
+    text-align: center;
+}
+
 .fixed-header{
     position: fixed;
     height: 50px;
@@ -125,6 +130,12 @@ h3 {
 .header{
 	background-color: rgba(255, 255, 255, 0.9);
 	height: 55px;
+}
+
+.header-subheading{
+    background-color: white;
+
+    height: 1em;
 }
 
 .footer {
@@ -163,9 +174,14 @@ h3 {
     height: 1em;
 }
 
+.lob-reports{
+    background-color: #d4f2ff;
+}
+
 .services-background{
     background-color: #a5c8ca;
 }
+
 .service-page-title{
     margin-top: 1em;
     margin-bottom: 1em;
@@ -210,6 +226,23 @@ h3 {
     max-width: 400px;
     -webkit-filter: grayscale(10%); /* Chrome, Safari, Opera */
     filter: grayscale(10%);
+}
+
+.service-text{
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.service-text-hover:hover{
+    background-color: rgba(255, 209, 170, 0.5);
+    border-radius: .5em .5em;
+    border: 1px solid rgba(255, 209, 170, 1);
+}
+
+.service-img-hover:hover{
+    border: 1px solid rgba(255, 209, 170, 1);
 }
 
 .about-title{
@@ -285,6 +318,45 @@ h3 {
 
 .third-row{
     cursor: pointer;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.lob-reports-overlay{
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.lob-reports-overlay-header{
+    margin-bottom: 2em;
+}
+
+.lob-reports-overlay-close-button{
+    z-index: 2;
+    right: 0;
+    top: 0;
+    color: #a4e3ff;
+    position: fixed;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
+
+.lob-reports-overlay img{
+
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    display: block;
 }
 /* Small devices (768px and down) */
 @media only screen and (max-width: 768px) {

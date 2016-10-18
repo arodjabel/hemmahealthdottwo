@@ -47,6 +47,16 @@ angular.module('hemma.navbar', [])
 						navbar.sidebarActive = false;
 					};
 
+					navbar.showSubheading = function(item){
+                        navbar.showSubheadingNav = true;
+						console.log(item)
+					};
+
+					navbar.hideSubheading = function(item){
+                        navbar.showSubheadingNav = false;
+                        console.log('close', item)
+                    }
+
 					event_updateSidebarContent = function(event, payload) {
 						navbar.sidebarContent = {'top': (payload) + 'px'};
 					};

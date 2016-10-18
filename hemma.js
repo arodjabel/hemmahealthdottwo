@@ -8,7 +8,8 @@ angular.module('app', [
     'hemma.footer',
     'common.modal',
     'hemma.resources',
-    'hemma.about'
+    'hemma.about',
+    'hemma.lobReports'
 ])
 .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
@@ -32,6 +33,10 @@ angular.module('app', [
         .when('/about-us', {
             template: '<div about-us></div>',
             class: 'about-us'
+        })
+        .when('/lob-reports', {
+            template: '<div lob-reports></div>',
+            class: 'lob-reports'
         })
         .otherwise({
             redirectTo: '/home'
