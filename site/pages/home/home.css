@@ -245,6 +245,21 @@ h3 {
     border: 1px solid rgba(255, 209, 170, 1);
 }
 
+.services-anchor-link {
+    cursor: pointer;
+    font-size: .9em;
+    font-family: monospace;
+}
+
+.services-anchor-link:hover {
+    color: #2a6496;
+    text-decoration: underline;
+}
+
+.service-hot-links {
+    margin-bottom: 2em;
+}
+
 .about-title{
     font-family: 'Shadows Into Light', cursive;
 }

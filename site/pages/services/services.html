@@ -4,7 +4,36 @@
             <h1>We can help you, here's how</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row service-hot-links">
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('eCW-SuperUser')">
+            SuperUser
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('eCW-SuperUser')">
+            Trainer
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Billing')">
+            Billing
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Reporting')">
+            Reporting
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">
+            Statements
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">Mailers
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">Letters
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('HIPAA')">HIPAA
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('PCMH')">PCMH</div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Dental')">Dental
+        </div>
+        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Revenue')">Revenue
+            Cycle
+        </div>
+    </div>
+    <div class="row" id="eCW-SuperUser">
         <div class="col-sm-6">
             <div class="service-text">
                 <div class="service-subtitle"><span>Certified eClinicalWorks Trainer and SuperUser</span></div>
@@ -30,7 +59,7 @@
                  alt="Super User" width="100%">
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="Dental">
         <div class="col-xs-12 spacer"></div>
     </div>
     <div class="row">
@@ -54,7 +83,7 @@
     <div class="row">
         <div class="col-xs-12 spacer"></div>
     </div>
-    <div class="row">
+    <div class="row" id="Billing">
         <div class="col-sm-6">
             <div class="service-text">
                 <div class="service-subtitle"><span>Medical Claim Billing</span></div>
@@ -75,7 +104,7 @@
     <div class="row">
         <div class="col-xs-12 spacer"></div>
     </div>
-    <div class="row">
+    <div class="row" id="Revenue">
         <div class="col-sm-6">
             <div class="service-text">
                 <div class="service-subtitle"><span>Revenue Cycle Management</span></div>
@@ -100,7 +129,7 @@
     <div class="row">
         <div class="col-xs-12 spacer"></div>
     </div>
-    <div class="row">
+    <div class="row" id="Custom">
         <div class="col-sm-6 " ng-click="servicesCtrl.openSubPage('lob-reports')">
             <div class="service-text service-text-hover pointer">
                 <div class="service-subtitle"><span>Custom Mailers, Statements, and Letters</span></div>

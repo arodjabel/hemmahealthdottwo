@@ -11,6 +11,9 @@ angular.module('app', [
     'hemma.about',
     'hemma.lobReports'
 ])
+    .run(['$anchorScroll', function ($anchorScroll) {
+        $anchorScroll.yOffset = 110;   // always scroll by 50 extra pixels
+    }])
 .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
         $routeProvider.when('/home', {

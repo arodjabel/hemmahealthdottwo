@@ -1,0 +1,24 @@
+<i class="fa fa-times-circle fa-2x pointer lob-reports-overlay-close-button" aria-hidden="true"
+   ng-show="lobCtrl.showOverlay" ng-click="lobCtrl.closeOverlay()"></i>
+
+<div class="lob-reports-overlay" ng-show="lobCtrl.showOverlay" ng-click="lobCtrl.closeOverlay()">
+    <img src="../../images/{{lobCtrl.image}}" alt="custom statement example">
+</div>
+<div class="col-md-10 col-md-offset-1">
+    <div class="row">
+        <div class="col-xs-12 lob-reports-overlay-header service-page-title">
+            <h1>Need a Custom Statement? Letter? Mailer?</h1>
+            <h3>We can fully customize any need and take care of the mailing too, have a look.</h3>
+        </div>
+        <div class="col-xs-6">
+            <a href="#" class="thumbnail" ng-click="lobCtrl.openFullExample('generic_simple_lob_example_full.jpg')">
+                <img src="../../images/generic_simple_lob_example_tile.jpg" alt="custom statement example">
+            </a>
+        </div>
+        <div class="col-xs-6">
+            <a href="#" class="thumbnail" ng-click="lobCtrl.openFullExample('generic_no_table_example_full.jpg')">
+                <img src="../../images/generic_no_table_example_tile.jpg" alt="custom statement example">
+            </a>
+        </div>
+    </div>
+</div>
