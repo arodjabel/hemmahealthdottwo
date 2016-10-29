@@ -1,36 +1,45 @@
-<div class="col-md-10 col-md-offset-1">
+<div class="col-md-1 col-xs-2">
+    <div class="row">
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('eCW-SuperUser')">SuperUser</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('eCW-SuperUser')">Trainer</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('Billing')">Billing</span>
+        </div>
+        <!--<div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Reporting')">-->
+        <!--Reporting-->
+        <!--</div>-->
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('Custom')">Statements</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('Custom')">Mailers</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('Custom')">Letters</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('hipaa')">HIPAA</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('PCMH')">PCMH</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+            <span ng-click="servicesCtrl.goToTag('Dental')">Dental</span>
+        </div>
+        <div class="col-xs-12 services-anchor-link">
+        <span ng-click="servicesCtrl.goToTag('Revenue')">Revenue
+        Cycle</span>
+        </div>
+    </div>
+</div>
+<div class="col-md-11 col-xs-10">
     <div class="row">
         <div class="col-md-12 service-page-title">
             <h1>We can help you, here's how</h1>
-        </div>
-    </div>
-    <div class="row service-hot-links">
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('eCW-SuperUser')">
-            SuperUser
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('eCW-SuperUser')">
-            Trainer
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Billing')">
-            Billing
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Reporting')">
-            Reporting
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">
-            Statements
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">Mailers
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Custom')">Letters
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('HIPAA')">HIPAA
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('PCMH')">PCMH</div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Dental')">Dental
-        </div>
-        <div class="col-xs-4 col-sm-3 col-md-2 services-anchor-link" ng-click="servicesCtrl.goToTag('Revenue')">Revenue
-            Cycle
         </div>
     </div>
     <div class="row" id="eCW-SuperUser">
@@ -54,10 +63,11 @@
                 </dl>
             </div>
         </div>
-        <div class="col-sm-6">
-            <img src="../../images/person-woman-desk-laptop-small.jpg" class="img-rounded services-image"
-                 alt="Super User" width="100%">
-        </div>
+        <!--<div class="col-sm-6">-->
+        <!--&lt;!&ndash;<img src="../../images/person-woman-desk-laptop-small.jpg" class="img-rounded services-image"&ndash;&gt;-->
+        <!--&lt;!&ndash;alt="Super User" width="100%">&ndash;&gt;-->
+        <!---->
+        <!--</div>-->
     </div>
     <div class="row" id="Dental">
         <div class="col-xs-12 spacer"></div>
@@ -124,6 +134,46 @@
         <div class="col-sm-6">
             <img src="../../images/working-at-table.jpg" class="img-rounded services-image" alt="Revenue Cycle"
                  width="100%">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 spacer"></div>
+    </div>
+    <div class="row" id="PCMH">
+        <div class="col-sm-6 " ng-click="servicesCtrl.openSubPage('contact-us')">
+            <div class="service-text service-text-hover pointer">
+                <div class="service-subtitle"><span>PCMH Training</span></div>
+                <div class="service-subtitle-subheading">Contact us for more details</div>
+                <dl class="dl-horizontal service-list">
+                    <dt>Training</dt>
+                    <dd>We offer PCMH training for clinical and administrative staff.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="col-sm-6 pointer" ng-click="servicesCtrl.openSubPage('lob-reports')">
+            <!--<img src="../../images/computer-code-small.jpg" class="img-rounded services-image service-img-hover"-->
+            <!--alt="Revenue Cycle" width="100%">-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 spacer"></div>
+    </div>
+    <div class="row" id="hipaa">
+        <div class="col-sm-6 " ng-click="servicesCtrl.openSubPage('contact-us')">
+            <div class="service-text service-text-hover pointer">
+                <div class="service-subtitle"><span>HIPAA Compliance and Training</span></div>
+                <div class="service-subtitle-subheading">Contact us for more details</div>
+                <dl class="dl-horizontal service-list">
+                    <dt>Training</dt>
+                    <dd>We offer HIPAA Compliance training for clinical and administrative staff.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="col-sm-6 pointer" ng-click="servicesCtrl.openSubPage('lob-reports')">
+            <!--<img src="../../images/computer-code-small.jpg" class="img-rounded services-image service-img-hover"-->
+            <!--alt="Revenue Cycle" width="100%">-->
         </div>
     </div>
     <div class="row">

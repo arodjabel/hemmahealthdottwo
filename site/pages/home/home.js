@@ -8,7 +8,6 @@ angular.module('hemma.home', [])
 			event_updateSidebarContent;
 
         $scope.goToPage = function(page){
-            console.log(page);
 			$location.path(page);
 		}
 	}

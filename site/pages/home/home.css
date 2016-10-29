@@ -62,22 +62,46 @@ h3 {
 	z-index: 9999;
 }
 
-.homepage-row{
-    margin-top: 1em;
-    /*min-height: 200px;*/
+.homepage-row div.homepage-header {
+    margin-top: 1.5em;
+    color: #607D8B;
+    text-align: center;
+    width: 80%;
+    font-size: 3.4em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
 }
 
-.homepage-row h1{
+.homepage-row div.sub-header-one {
     text-align: center;
-    margin-top: 1em;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.homepage-row h3{
+.homepage-row div.sub-header-one span {
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.homepage-row div.sub-header-two {
+    width: 50%;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
     text-align: center;
 }
 
-.homepage-row h5{
-    text-align: center;
+.btn-hemma {
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: white;
+    background-color: #b7c1cc;
 }
 
 .list-group-item {
@@ -152,6 +176,7 @@ h3 {
 }
 
 .horizontal-menu{
+    margin-top: 5px;
 	display: inherit;
 }
 
@@ -246,14 +271,25 @@ h3 {
 }
 
 .services-anchor-link {
-    cursor: pointer;
-    font-size: .9em;
-    font-family: monospace;
+    padding-top: .2em;
 }
 
-.services-anchor-link:hover {
-    color: #2a6496;
-    text-decoration: underline;
+.services-anchor-link span:hover {
+    color: #b7c1cc;
+    background-color: white;
+}
+
+.services-anchor-link span {
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: #b7c1cc;
+    color: white;
+    font-weight: 300;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .1em;
+    cursor: pointer;
+    font-size: 1em;
 }
 
 .service-hot-links {
@@ -261,7 +297,7 @@ h3 {
 }
 
 .about-title{
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Shadows Into Light Two';
 }
 
 .about-title h1{
@@ -274,6 +310,7 @@ h3 {
 .about-text-body{
     font-size: 1.5em;
     text-align: left;
+    /*font-family: Inconsolata;*/
 }
 
 .contact-form-image{

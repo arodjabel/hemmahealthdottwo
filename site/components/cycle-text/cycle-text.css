@@ -1,0 +1,23 @@
+.cycle-text-text-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.cycle-text-text {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #607D8B;
+}
+
+@media only screen and (max-width: 768px) {
+    .cycle-text-text-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}

@@ -15,5 +15,12 @@
   },
   "scripts": {
     "start": "node app.js"
+  },
+  "jshintConfig": {
+    "node": true,
+    "globals": {
+      "angular": true,
+      "Promise": true
+    }
   }
 }
