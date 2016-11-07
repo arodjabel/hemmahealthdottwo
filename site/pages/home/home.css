@@ -272,11 +272,27 @@ h3 {
 
 .services-anchor-link {
     padding-top: .2em;
+    text-align: right;
+
 }
 
-.services-anchor-link span:hover {
+.services-anchor-link .btn-default {
+    color: #dcdcdc;
+    background-color: #4a626d;
+    border-color: #ccc;
+    font-size: 1.1em;
+}
+
+.services-anchor-link button:hover {
     color: #b7c1cc;
     background-color: white;
+}
+
+.services-anchor-link-icon {
+    text-align: left;
+    color: #666666;
+    margin-bottom: .2em;
+    font-size: 1.8em;
 }
 
 .services-anchor-link span {
@@ -284,16 +300,15 @@ h3 {
     border-radius: 2px;
     background-color: #b7c1cc;
     color: white;
-    font-weight: 300;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: .1em;
+
     cursor: pointer;
     font-size: 1em;
 }
 
-.service-hot-links {
-    margin-bottom: 2em;
+.services-hot-link-container {
+    position: fixed;
+    width: 100%;
+    top: 5em;
 }
 
 .about-title{
@@ -403,7 +418,6 @@ h3 {
 }
 
 .lob-reports-overlay img{
-
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -445,6 +459,15 @@ h3 {
     .about-title h1{
         font-size: 3em;
     }
+
+    .services-anchor-link .btn-default {
+        font-size: .8em;
+    }
+
+    .services-anchor-link-icon {
+        margin-bottom: 0;
+        font-size: 1.3em;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -459,6 +482,10 @@ h3 {
         color: #e62739;
         font-weight: 100;
         margin-top: 10px;
+    }
+
+    .services-anchor-link > button.btn-default {
+        font-size: 12px;
     }
 }
 

@@ -9,6 +9,6 @@ angular.module('hemma.home', [])
 
         $scope.goToPage = function(page){
 			$location.path(page);
-		}
+		};
 	}
 ]);

@@ -2,7 +2,7 @@
     width: 60%;
     margin-left: auto;
     margin-right: auto;
-    height: 2em;
+    min-height: 2em;
     margin-top: 1em;
     text-align: center;
 }
@@ -11,6 +11,7 @@
     font-size: 2em;
     font-weight: bolder;
     color: #607D8B;
+    text-shadow: 0 0 3px #9E9E9E, 0 0 3px rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 768px) {
@@ -20,4 +21,6 @@
         margin-right: auto;
         text-align: center;
     }
+
+    .c
 }

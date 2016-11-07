@@ -23,7 +23,7 @@ angular.module('hemma.cycleText', [])
                     'We optimize eCW',
                     'We develop eCW SuperUsers',
                     'We customize patient statements',
-                    'We do HIPPA compliance',
+                    'We do HIPAA compliance',
                     'We do PCMH'
                 ];
 
