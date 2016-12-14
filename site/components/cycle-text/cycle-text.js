@@ -77,6 +77,7 @@ angular.module('hemma.cycleText', [])
                 function resetCycle() {
                     clearTimeout(loopTheLettersTimeout);
                     clearTimeout(loopTheWordsTimeout);
+                  textSpot.text('');
                     textSpot.text(wordList[0]);
                     curWordState = '';
                 }

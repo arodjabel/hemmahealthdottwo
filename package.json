@@ -13,6 +13,9 @@
     "open": "latest",
     "request": "latest"
   },
+  "devDependencies": {
+    "jscs": "latest"
+  },
   "scripts": {
     "start": "node app.js"
   },
@@ -22,5 +25,8 @@
       "angular": true,
       "Promise": true
     }
+  },
+  "jscsConfig": {
+    "requireUseStrict": true
   }
 }

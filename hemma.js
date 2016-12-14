@@ -11,7 +11,8 @@ angular.module('app', [
     'hemma.resources',
     'hemma.about',
     'hemma.lobReports',
-    'hemma.cycleText'
+  'hemma.cycleText',
+  'hemma.uber'
 ])
     .run(['$anchorScroll', function ($anchorScroll) {
         $anchorScroll.yOffset = 110;   // always scroll by 50 extra pixels
@@ -42,6 +43,10 @@ angular.module('app', [
                 .when('/lob-reports', {
                     template: '<div lob-reports></div>',
                     class: 'lob-reports'
+                })
+                .when('/uber', {
+                  template: '<div uber-integration></div>',
+                  class: 'uber-integration'
                 })
                 .otherwise({
                     redirectTo: '/home'

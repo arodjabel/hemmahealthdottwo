@@ -1,4 +1,4 @@
-
+'use strict';
 var express = require('express');
 var app = express();
 var open = require('open');
@@ -17,22 +17,22 @@ app.all('/server/contact-us', function(req, res){
 	// res.sendStatus('200');
 	foo.contactUsResponseReceiver(req.body).then(function(response){
 		if(response.message){
-			console.log(response.message)
+          console.log(response.message);
 		}
 		res.status(200).send({'response': 'recaptcha was valid, email was sent', value: true});
 	}).catch(function(response){
 		if(response.message){
-			console.log(response.message)
+          console.log(response.message);
 		}
 		res.status(200).send({'response':'recaptcha was invalid.', value: false});
-	})
-})
+    });
+});
 
 app.use(express.static(__dirname ));
 
 app.all('/*', function (req, res) {
    	res.sendFile('index.html', { root: __dirname });
-})
+});
 
 app.listen(port);
 open(url);
