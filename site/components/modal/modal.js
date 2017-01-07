@@ -26,7 +26,7 @@ angular.module('common.modal', [])
 				$scope.$on('modalHasBeenUpdated', commonModalChange)
 
 			}],
-			templateUrl: './site/components/modal/modal.html',
+          templateUrl: 'components/modal/modal.html',
 			scope: {
 				commonModal: '='
 			}

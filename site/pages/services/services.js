@@ -24,7 +24,7 @@ angular.module('hemma.services', [])
 
                     servicesCtrl.servicesHotLinks = servicesHotLinks;
                 }],
-                templateUrl: './site/pages/services/services.html'
+              templateUrl: 'pages/services/services.html'
             };
         }])
     .constant('servicesHotLinks', [
