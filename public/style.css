@@ -1,0 +1,574 @@
+.cycle-text-text-container {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 2em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.cycle-text-text {
+    font-size: 2em;
+    font-weight: bolder;
+    color: #607D8B;
+    text-shadow: 0 0 3px #9E9E9E, 0 0 3px white;
+}
+
+@media only screen and (max-width: 768px) {
+    .cycle-text-text-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+.modal-container {
+    position: absolute;
+    z-index: 100;
+    background: rgba(237, 253, 255, 0.8);
+    left: 0;
+    height: 100%;
+}
+
+.modal-container-rel {
+    margin-top: 2em;
+    position: relative;
+    z-index: 101;
+    background: #30aed8;
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+}
+
+.navbar-brand img {
+    width: 10%;
+}
+
+.hidden-fixed {
+    height: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+h1 {
+    font-size: 40px;
+    color: #666666;
+}
+
+h3 {
+    font-weight: 300;
+}
+
+.title h1 {
+    font-size: 3.4em;
+    color: #e62739;
+    font-weight: 100;
+    margin-top: 0px;
+}
+
+.title h3 {
+    margin-top: 10px;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.title-heading {
+    cursor: pointer;
+}
+
+.header-spacer {
+    height: 10px;
+}
+
+.header-menu-button {
+    margin-top: 12px;
+    cursor: pointer;
+    color: darkgray;
+}
+
+.hide-sidebar {
+    display: none;
+}
+
+.sidebar {
+    border: solid 1px #555;
+    background-color: rgba(126, 134, 136, 0.43);
+    padding-bottom: 2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.homepage-row div.homepage-header {
+    margin-top: 1.5em;
+    color: #607D8B;
+    text-align: center;
+    width: 80%;
+    font-size: 3.4em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
+}
+
+.homepage-row div.sub-header-one {
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homepage-row div.sub-header-one span {
+    font-size: 1.4em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.homepage-row div.sub-header-two {
+    width: 50%;
+    font-size: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.btn-hemma {
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-weight: 100;
+    color: white;
+    background-color: #b7c1cc;
+}
+
+.list-group-item {
+    border-color: #000000;
+}
+
+.sidebar-list {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.sidebar-item {
+    font-size: 2em;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    padding-left: 1em;
+    padding-top: .2em;
+    padding-bottom: .3em;
+    text-align: left;
+    background-color: #9068be;
+    border-top: #b7b4b4 1px solid;
+    /*font-size: 2em;*/
+}
+
+.sidebar-icon {
+    width: 1.5em;
+    text-align: center;
+}
+
+.fixed-header {
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    color: white;
+    background-color: #e62739;
+}
+
+.fixed-header span {
+    color: white;
+}
+
+.fixed-header .header-menu-button {
+    color: white;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 55px;
+}
+
+.header-subheading {
+    background-color: white;
+    height: 1em;
+}
+
+.footer {
+    position: relative;
+    margin-top: -150px;
+    /* negative value of footer height */
+    height: 150px;
+    clear: both;
+    padding-top: 20px;
+}
+
+.hamburger-icon {
+    font-size: 2em;
+    display: none;
+}
+
+.horizontal-menu {
+    margin-top: 5px;
+    display: inherit;
+}
+
+.horizontal-menu-span {
+    cursor: pointer;
+    color: #666666;
+    font-size: 1em;
+    font-weight: 300;
+    margin-right: 2em;
+    margin-top: 1em;
+    line-height: 3.4em;
+}
+
+.horizontal-menu-item {
+    margin-top: 1em;
+    text-align: right;
+}
+
+.spacer {
+    height: 1em;
+}
+
+.lob-reports {
+    background-color: #d4f2ff;
+}
+
+.services-background {
+    background-color: #a5c8ca;
+}
+
+.service-page-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.service-list {
+    /*padding-left: 3em;*/
+}
+
+.service-list dt {
+    font-family: monospace;
+    font-weight: 300;
+    color: #000000;
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+.service-list dd {
+    font-weight: 200;
+    font-size: 1.2em;
+}
+
+.service-subtitle {
+    font-size: 1.3em;
+    color: #4a626d;
+    text-align: left;
+}
+
+.service-subtitle span {
+    border-bottom: .5px solid #4a626d;
+}
+
+.service-subtitle-subheading {
+    padding-left: 1em;
+    color: #585858;
+    text-align: left;
+    font-weight: 400;
+}
+
+.services-image {
+    width: 100%;
+    max-width: 400px;
+    -webkit-filter: grayscale(10%);
+    /* Chrome, Safari, Opera */
+    filter: grayscale(10%);
+}
+
+.service-text {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.service-text-hover:hover {
+    background-color: rgba(255, 209, 170, 0.5);
+    border-radius: .5em .5em;
+    border: 1px solid #ffd1aa;
+}
+
+.service-img-hover:hover {
+    border: 1px solid #ffd1aa;
+}
+
+.services-anchor-link {
+    padding-top: .2em;
+    text-align: right;
+}
+
+.services-anchor-link .btn-default {
+    color: #dcdcdc;
+    background-color: #4a626d;
+    border-color: #ccc;
+    font-size: 1.1em;
+}
+
+.services-anchor-link button:hover {
+    color: #b7c1cc;
+    background-color: white;
+}
+
+.services-anchor-link-icon {
+    text-align: left;
+    color: #666666;
+    margin-bottom: .2em;
+    font-size: 1.8em;
+}
+
+.services-anchor-link span {
+    border: 1px solid white;
+    border-radius: 2px;
+    background-color: #b7c1cc;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.services-hot-link-container {
+    position: fixed;
+    width: 100%;
+    top: 5em;
+}
+
+.about-title {
+    font-family: 'Shadows Into Light Two';
+}
+
+.about-title h1 {
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-size: 5em;
+    text-align: center;
+}
+
+.about-text-body {
+    font-size: 1.5em;
+    text-align: left;
+    /*font-family: Inconsolata;*/
+}
+
+.contact-form-image {
+    background-color: transparent;
+    background: url("../../../../images/contact-phone.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.resources-image {
+    background-color: transparent;
+    background: url("../../../../images/stack-of-books.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.home-image {
+    background-color: transparent;
+    background: url("../../../images/human-on-cliff.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.about-us {
+    background-color: transparent;
+    background: url("../../../images/kansas-city-1380036_1920.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.resources-container-child {
+    margin-top: 1em;
+}
+
+.contact-container {
+    margin-top: 1em;
+}
+
+.opaque-background {
+    border-radius: .5em .5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: .5em;
+    margin-bottom: 100px;
+}
+
+.second-row {
+    cursor: pointer;
+}
+
+.third-row {
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.lob-reports-overlay {
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.lob-reports-overlay-header {
+    margin-bottom: 2em;
+}
+
+.lob-reports-overlay-close-button {
+    z-index: 2;
+    right: 0;
+    top: 0;
+    color: #a4e3ff;
+    position: fixed;
+    margin-right: 2%;
+    margin-top: 0.5%;
+}
+
+.lob-reports-overlay img {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    display: block;
+}
+
+/* Small devices (768px and down) */
+@media only screen and (max-width: 768px) {
+    .sidebar-item {
+        font-size: 2em;
+    }
+
+    .col-xs-0, .col-sm-0 {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .horizontal-menu {
+        display: none;
+    }
+
+    .title h1 {
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .contact-form-container {
+        background: url("../../../../images/contact-phone.jpg") no-repeat left center fixed;
+        background-size: cover;
+    }
+
+    .opaque-background {
+        border-radius: .5em .5em;
+    }
+
+    .about-title h1 {
+        font-size: 3em;
+    }
+
+    .services-anchor-link .btn-default {
+        font-size: .8em;
+    }
+
+    .services-anchor-link-icon {
+        margin-bottom: 0;
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .opaque-background {
+        border-radius: .5em .5em;
+    }
+
+    .horizontal-menu-span {
+        font-size: 1em;
+    }
+
+    .title h1 {
+        font-size: 2.4em;
+        color: #e62739;
+        font-weight: 100;
+        margin-top: 10px;
+    }
+
+    .services-anchor-link > button.btn-default {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 992px) {
+    .resources-container {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: 50px;
+        z-index: -99;
+    }
+
+    .whole-page-image {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: 50px;
+        z-index: -99;
+    }
+}
+
+.uber-integration {
+    background-color: #999999;
+}
