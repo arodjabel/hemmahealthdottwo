@@ -5,14 +5,17 @@ var fs = require('fs');
 var path = require('path');
 var Zip = require('adm-zip');
 var exec = require('exec');
+var templateCache = require('./node/templateCache.js');
+var compile = require('./node/compress.js');
+var sassCompile = require('./node/sassCompile.js');
 var filesToCompress,
     dirsToCompress;
 
 var archiver = require('archiver');
-var awsBeanstalk = require("node-aws-beanstalk");
+var awsBeanstalk = require('node-aws-beanstalk');
 
-filesToCompress = ['app.js', 'hemma.js', 'index.html', 'package.json'];
-dirsToCompress = ['images', 'server', 'site'];
+filesToCompress = ['app.js', 'index.html', 'package.json'];
+dirsToCompress = ['images', 'public', 'server'];
 
 function createArchive(dir) {
   return new Promise(function (resolve, reject) {
@@ -91,7 +94,7 @@ function runTheArchive() {
 
         fs.open(archive, 'r', function (err, fd) {
           if (err) {
-            if (err.code === "ENOENT") {
+            if (err.code === 'ENOENT') {
               console.error('Archive.zip is not available');
               createArchive(dir).then(function () {
                 closeTheFile(fd);
@@ -111,45 +114,18 @@ function runTheArchive() {
     }
 
     startDeploy();
-    // startDeploy().then(deployToEb);
   });
 }
 
-// i havent been able to get this one to work quite right yet
-function deployToEb() {
-  var spawn = require('child_process').spawn;
-  var ls = spawn('eb', ['deploy', '--staged']);
+gulp.task('templateCache', templateCache.cacheTemplates);
+gulp.task('compile', compile.compress);
+gulp.task('sassCompile', sassCompile.sassCompile);
 
-  ls.stdout.setEncoding('utf8');
-  ls.stderr.setEncoding('utf8');
-
-  ls.stdout.on('data', function (data) {
-
-    var str = data.toString(), lines = str.split(/(\r?\n)/g);
-    for (var i = 0; i < lines.length; i++) {
-      // Process the line, noting it might be incomplete.
-      if (lines[i])
-        console.log(lines[i]);
-    }
-  });
-
-  ls.stderr.on('data', function (data) {
-    var str = data.toString(), lines = str.split(/(\r?\n)/g);
-    for (var i = 0; i < lines.length; i++) {
-      // Process the line, noting it might be incomplete.
-      if (lines[i])
-        console.log(lines[i]);
-    }
-  });
-
-  ls.on('close', function (code) {
-    console.log(code);
-  });
-}
-
-// function cacheTemplates(){
-//
-// }
+gulp.task('watch', function () {
+  gulp.watch('site/**/*.html', ['templateCache']);
+  gulp.watch('site/**/*.js', ['compile']);
+  gulp.watch('site/**/*.css', ['sassCompile']);
+});
 
 gulp.task('archive', runTheArchive);
-gulp.task('ebDeploy', deployToEb);
+gulp.task('default', ['watch']);

@@ -4,7 +4,7 @@ angular.module('hemma.navbar', [])
 .directive('navbar', ['$rootScope', '$window', '$location', 'nav.menuItems',
 	function($rootScope, $window, $location, menuItems){
 		return {
-			templateUrl: './site/components/navbar/navbar.html',
+          templateUrl: 'components/navbar/navbar.html',
 			controllerAs: 'navbar',
 			controller: ['$scope', '$window', '$route', '$templateCache',
 				function($scope, $window, $route, $templateCache){

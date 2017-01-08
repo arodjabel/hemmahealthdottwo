@@ -14,23 +14,46 @@
     "request": "latest"
   },
   "devDependencies": {
-    "jscs": "latest"
+    "concat": "0.0.1-security",
+    "concurrently": "^3.1.0",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "0.0.14",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.11",
+    "jscs": "latest",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "protractor": "^4.0.14"
   },
   "scripts": {
     "start": "node app.js",
     "deploy": "npm run archive && npm run ebDeploy",
     "archive": "gulp archive",
-    "ebDeploy": "eb deploy --staged"
+    "ebDeploy": "eb deploy --staged",
+    "start:gulp": "cd node && gulp",
+    "start:dev": "concurrently \"npm run start:gulp\" \"npm start\"",
+    "test:unitTest": "karma start ./tests/karma.conf.js --singleRun",
+    "test:regression": "protractor ./tests/protractor.conf.js"
   },
   "jshintConfig": {
     "node": true,
     "globals": {
       "angular": true,
-      "Promise": true
+      "Promise": true,
+      "describe": true,
+      "beforeEach": true,
+      "it": true,
+      "expect": true,
+      "browser": true,
+      "inject": true
     }
   },
   "jscsConfig": {
     "requireUseStrict": true,
-    "requireTrailingComma": false
+    "requireTrailingComma": false,
+    "disallowMultipleVarDecl": false
   }
 }

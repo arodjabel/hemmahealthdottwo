@@ -1,16 +1,16 @@
 'use strict';
 
 angular.module('hemma.cycleText', [])
-    .directive('cycleText', ['$timeout', '$window', 'cycleText.shuffleArray',
-      function ($timeout, $window, shuffleArray) {
+    .directive('cycleText', ['$timeout', '$window', 'cycleText.shuffleArray', 'cycleText.wordList',
+      function ($timeout, $window, shuffleArray, wordList) {
         return {
           bindToController: true,
           controllerAs: 'cycleCtrl',
           controller: ['$element',
             function (elem) {
-              var cycleCtrl = this,
+              var _this = this,
+                  cycleCtrl = _this,
                   textSpot,
-                  wordList,
                   randomOrder,
                   s,
                   timeoutLength,
@@ -19,15 +19,6 @@ angular.module('hemma.cycleText', [])
                   loopTheLettersTimeout;
 
               timeoutLength = 6000;
-              wordList = [
-                'We are SuperUsers',
-                'We do Revenue Cycle Management',
-                'We optimize eCW',
-                'We develop eCW SuperUsers',
-                'We customize patient statements',
-                'We do HIPAA compliance',
-                'We do PCMH'
-              ];
 
               textSpot = angular.element(elem[0].querySelectorAll('.cycle-text-text'));
 
@@ -86,10 +77,9 @@ angular.module('hemma.cycleText', [])
               $window.onblur = resetCycle;
 
               doShuffle();
-
             }
           ],
-          templateUrl: './site/components/cycle-text/cycle-text.html'
+          templateUrl: 'components/cycle-text/cycle-text.html'
         };
       }
     ])
@@ -112,4 +102,13 @@ angular.module('hemma.cycleText', [])
 
         return array;
       };
-    }]);
+    }])
+    .constant('cycleText.wordList', [
+      'We are SuperUsers',
+      'We do Revenue Cycle Management',
+      'We optimize eCW',
+      'We develop eCW SuperUsers',
+      'We customize patient statements',
+      'We do HIPAA compliance',
+      'We do PCMH'
+    ]);
