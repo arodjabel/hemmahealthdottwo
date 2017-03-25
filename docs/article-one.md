@@ -6,6 +6,6 @@
 
 [Full list of resources](https://www.ahrq.gov/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/interventions.html). 
 </div>
-<div class="col-sm-12 col-md-6">
+<div class="col-sm-12 col-md-6 article-one-image">
 ![Warm Handoff Staff Checklist](https://raw.githubusercontent.com/arodjabel/hemmahealthdottwo/master/docs/warm-handoff-staff-checklist-1.jpg)</div>
 </div>
