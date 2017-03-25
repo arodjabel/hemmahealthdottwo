@@ -2,4 +2,4 @@
 
 A warm handoff is a transfer of care from one clinician to another, where the handoff occurs in front of the patient and family. The best resource I found was the [Design Guide](google.com) for Implementing Warm Hand-offs. While the guide may seem quick and practical, in an ever-busy clinic environment, this transition gets overlooked. (Ever see a provider chase their nurse to ask if the patient is ready to be seen?) I'm also not used to seeing the hand-off occur in front of the patient. How does your clinic handle this? 
 
-The full list of resources can be found here (https://www.ahrq.gov/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/interventions.html). 
+[Full list of resources](https://www.ahrq.gov/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/interventions.html). 
