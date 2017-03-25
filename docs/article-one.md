@@ -1,4 +1,4 @@
-# AHRQ (Agency for Healthcare Research and Quality) recently updated their website to provide guidance on warm hand-offs. 
+AHRQ (Agency for Healthcare Research and Quality) recently updated their website to provide guidance on warm hand-offs. 
 
 <div class="row">
 <div class="col-sm-12 col-md-6 article-one-body">
