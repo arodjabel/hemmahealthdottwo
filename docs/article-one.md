@@ -4,4 +4,4 @@ A warm handoff is a transfer of care from one clinician to another, where the ha
 
 [Full list of resources](https://www.ahrq.gov/professionals/quality-patient-safety/patient-family-engagement/pfeprimarycare/interventions.html). 
 
-[Warm Handoff Staff Checklist](https://raw.githubusercontent.com/arodjabel/hemmahealthdottwo/master/docs/warm-handoff-staff-checklist-1.jpg)
+![Warm Handoff Staff Checklist](https://raw.githubusercontent.com/arodjabel/hemmahealthdottwo/master/docs/warm-handoff-staff-checklist-1.jpg)
